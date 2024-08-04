@@ -1,0 +1,85 @@
+﻿<Page x:Class="ISBN.View.ISBN_Search"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISBN"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="ISBN_Search" Cursor="Hand">
+
+    <Canvas Background="#FFEFF0F4" Cursor="Hand">
+        <Border BorderThickness="3" Height="380" Width="740" Canvas.Left="30" Canvas.Top="75" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Border.Resources>
+                <Style TargetType = "{x:Type Border}">
+                    <Setter Property = "CornerRadius" Value="20"/>
+                </Style>
+            </Border.Resources>
+            <Border.Background>
+                <SolidColorBrush Color="#FF142D4C" Opacity="0.5"/>
+            </Border.Background>
+        </Border>
+        <Border BorderThickness="1" Height="70" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF162C48" Cursor="Hand" >
+        </Border>
+        <Image Height="53" Canvas.Left="10" Source="/Properties/Image/logo1.png" Stretch="Fill" Width="51" HorizontalAlignment="Center" Canvas.Top="5" VerticalAlignment="Top"/>
+        <TextBlock Padding="0,16" VerticalAlignment="Center" Text="국립 중앙도서관" Canvas.Left="70" Canvas.Top="4" Foreground="#FFE5E5E5" HorizontalAlignment="Left" FontSize="24" FontFamily="Impact" FontWeight="Bold" />
+        <Image x:Name="img_title" HorizontalAlignment="Center" Height="342" Source="/Properties/Image/no-photos.png" 
+                              Width="269" Canvas.Left="61" Canvas.Top="94" OpacityMask="#FFFCF2F2" />
+        <Label Content="표   제" Height="24" Width="68" FontSize="18" VerticalContentAlignment="Center" Foreground="#FFEFF0F4" FontWeight="Bold" Canvas.Left="352" Canvas.Top="104" HorizontalAlignment="Center" VerticalAlignment="Top" Padding="0,0,0,0"/>
+        <TextBox x:Name="tbx_title" Height="40"
+            TextWrapping="Wrap"
+            Text="표제"
+            IsReadOnly="true"
+            Width="395" FontSize="15" Style="{x:Null}" SelectionOpacity="0"
+            SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"
+            Canvas.Left="352" Canvas.Top="133" Foreground="#FFEFF0F4" HorizontalAlignment="Center" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" />
+        <Label Content="저   자" Height="23" Width="68" FontSize="18" VerticalContentAlignment="Center" Foreground="#FFEFF0F4" FontWeight="Bold" Canvas.Left="352" Canvas.Top="174" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <Line X1="0" Y1="0" Y2="25" Canvas.Top="178" Canvas.Left="346" Stroke="#FFEFF0F4" HorizontalAlignment="Center" VerticalAlignment="Top" Height="18" StrokeThickness="2" />
+        <TextBox x:Name="tbx_author" Height="35"
+            TextWrapping="Wrap"
+            Text="저자"
+            IsReadOnly="true"
+            Width="395" FontSize="15" Style="{x:Null}"
+            VerticalContentAlignment="Center" SelectionOpacity="0"
+            SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"
+            Canvas.Left="352" Canvas.Top="202" Foreground="#FFEFF0F4" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Label Content="주   제" Height="24" Width="68" FontSize="18" VerticalContentAlignment="Center" Foreground="#FFEFF0F4" FontWeight="Bold" Canvas.Left="352" Canvas.Top="304" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_category" Height="35"
+            TextWrapping="Wrap"
+            Text="주제"
+            IsReadOnly="true"
+            Width="395" FontSize="15" Style="{x:Null}"
+            VerticalContentAlignment="Center" SelectionOpacity="0"
+            SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"
+            Canvas.Left="352" Canvas.Top="333" Foreground="#FFEFF0F4" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Label Content="이용 장소" Height="22" Width="83" FontSize="18" VerticalContentAlignment="Center" Foreground="#FFEFF0F4" FontWeight="Bold" Canvas.Left="352" Canvas.Top="369" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_place" Height="35"
+            TextWrapping="Wrap"
+            Text="장소"
+            IsReadOnly="true"
+            Width="395" FontSize="15" Style="{x:Null}"
+            VerticalContentAlignment="Center" SelectionOpacity="0"
+            SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"
+            Canvas.Left="352" Canvas.Top="396" Foreground="#FFEFF0F4" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Label Content="출 판 사" Height="22" Width="72" FontSize="18" VerticalContentAlignment="Center" Foreground="#FFEFF0F4" FontWeight="Bold" Canvas.Left="352" Canvas.Top="238" Padding="0,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbx_publisher" Height="35"
+            TextWrapping="Wrap"
+            Text="출판사"
+            IsReadOnly="true"
+            Width="395" FontSize="15" Style="{x:Null}"
+            VerticalContentAlignment="Center" SelectionOpacity="0"
+            SelectionBrush="{x:Null}" SelectionTextBrush="{x:Null}"
+            Canvas.Left="352" Canvas.Top="268" Foreground="#FFEFF0F4" Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Line X1="0" Y1="0" Y2="25" Canvas.Top="107" Canvas.Left="346" Stroke="#FFEFF0F4" Height="18" HorizontalAlignment="Center" VerticalAlignment="Top" StrokeThickness="2" />
+        <Line X1="0" Y1="0" Y2="25" Canvas.Top="308" Canvas.Left="346" Stroke="#FFEFF0F4" Height="18" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Line X1="0" Y1="0" Y2="25" Canvas.Top="372" Canvas.Left="346" Stroke="#FFEFF0F4" Height="18" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <Line X1="0" Y1="0" Y2="25" Canvas.Top="242" Canvas.Left="346" Stroke="#FFEFF0F4" Height="18" StrokeThickness="2" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        <!--Source="{Binding SelectUrl}"-->
+        <Button x:Name="back_btn" HorizontalAlignment="Left" Height="49" VerticalAlignment="Center" Width="71" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Canvas.Left="724" Canvas.Top="13" Click="back_btn_Click"  >
+            <materialDesign:PackIcon Kind="ArrowLeft" Height="49" Width="71" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Button>
+    </Canvas>
+
+</Page>

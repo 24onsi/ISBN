@@ -1,0 +1,40 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISBN"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="ISBN.View.Main"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Main">
+
+    <Canvas Background="#FFEFF0F4">
+        <Button x:Name="Btn_ISBN"
+  Content="ISBN 코드 인식"
+  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+  Style="{StaticResource MaterialDesignRaisedDarkButton}"
+  ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Canvas.Left="450" Canvas.Top="154" Height="53" Width="295" Background="#FF4F5D7E" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="18" Click="Btn_ISBN_Click" />
+        <Border BorderThickness="1" Height="70" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF162C48" />
+        <Image Height="53" Canvas.Left="10" Source="/Properties/Image/logo1.png" Stretch="Fill" Width="51" HorizontalAlignment="Center" Canvas.Top="5" VerticalAlignment="Top"/>
+        <TextBlock Padding="0,16" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleLargeTextBlock}" Text="국립 중앙도서관" Canvas.Left="70" Canvas.Top="4" Foreground="#FFE5E5E5" HorizontalAlignment="Left" FontSize="24" FontFamily="Impact" FontWeight="Bold" />
+        <Label Content="" Height="328" Canvas.Left="36" Canvas.Top="98" Width="347" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Label.Background>
+                <ImageBrush ImageSource="/Properties/Image/PAM1.png" Opacity="0.5"/>
+            </Label.Background>
+        </Label>
+        <Button x:Name="Btn_Book"
+            Content="도서 검색"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Canvas.Left="450" Canvas.Top="234" Height="53" Width="295" Background="#FF4F5D7E" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Click="Btn_Book_Click" />
+        <Button x:Name="Btn_Log"
+            Content="검색 기록 조회"
+            IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+            Style="{StaticResource MaterialDesignRaisedDarkButton}"
+            ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Canvas.Left="450" Canvas.Top="314" Height="53" Width="295" Background="#FF4F5D7E" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Cursor="Hand" Click="Btn_Log_Click" />
+        <materialDesign:PackIcon Kind="BarcodeScan" Height="31" Width="43" Canvas.Left="489" Canvas.Top="165" Foreground="White" />
+        <materialDesign:PackIcon Kind="BookSearchOutline" Height="32" Width="44" Canvas.Left="488" Canvas.Top="244" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <materialDesign:PackIcon Kind="TextBoxSearchOutline" Height="32" Width="43" Canvas.Left="489" Canvas.Top="324" RenderTransformOrigin="0.326,0.51" HorizontalAlignment="Center" Foreground="White" />
+    </Canvas>
+</Page>

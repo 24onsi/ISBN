@@ -1,0 +1,49 @@
+﻿<Page x:Class="ISBN.View.Book_Log"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ISBN"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="800"
+      Title="Book_Log">
+
+    <Canvas Background="#FFEFF0F4">
+        <Border BorderThickness="1" Height="70" Width="800" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#FF162C48" />
+        <Image Height="53" Canvas.Left="10" Source="/Properties/Image/logo1.png" Stretch="Fill" Width="51" HorizontalAlignment="Center" Canvas.Top="5" VerticalAlignment="Top"/>
+        <TextBlock Padding="0,16" VerticalAlignment="Center" Style="{StaticResource MaterialDesignTitleLargeTextBlock}" Text="국립 중앙도서관" Canvas.Left="70" Canvas.Top="4" Foreground="#FFE5E5E5" HorizontalAlignment="Left" FontSize="24" FontFamily="Impact" FontWeight="Bold" />
+        <TextBox x:Name="tb_Log"
+            VerticalAlignment="Center"
+            materialDesign:HintAssist.Hint="검색 기록 조회"
+            materialDesign:HintAssist.Foreground="#FFE99B92"
+            materialDesign:TextFieldAssist.UnderlineBrush="#FF4F5D7E"
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}" Canvas.Left="239" Canvas.Top="109" HorizontalAlignment="Left" Width="322" />
+        <materialDesign:PackIcon Kind="Magnify" Canvas.Left="537" Canvas.Top="114" Height="23" Width="24" VerticalAlignment="Center" />
+        <ListView x:Name="list_Log" ItemsSource="{Binding Items1}" SelectionChanged ="SelectSeachLog" Canvas.Left="36" Canvas.Top="167" HorizontalAlignment="Center" Height="306" VerticalAlignment="Top" Width="733">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="NO" DisplayMemberBinding="{Binding NO}"/>
+                    <!--DisplayMemberBinding="{Binding Code}"-->
+                    <GridViewColumn
+                        Header="ISBN" DisplayMemberBinding="{Binding ISBN}"/>
+                    <!--DisplayMemberBinding="{Binding Description}"-->
+                    <GridViewColumn
+                        Header="도서명" DisplayMemberBinding="{Binding Title}"/>
+                    <!--DisplayMemberBinding="{Binding Name}"-->
+                    <GridViewColumn
+                        Header="저자" DisplayMemberBinding="{Binding Author}"/>
+                    <GridViewColumn Header="출판사" DisplayMemberBinding="{Binding Publisher}"/>
+                    <GridViewColumn Header="카테고리" DisplayMemberBinding="{Binding Category}"/>
+                    <GridViewColumn Header="위치" DisplayMemberBinding="{Binding Place}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="home_btn" HorizontalAlignment="Left" Height="49" VerticalAlignment="Center" Width="71" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" Canvas.Left="724" Canvas.Top="13" Click="home_btn_Click"  >
+            <materialDesign:PackIcon Kind="Home" Height="49" Width="71" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Button>
+
+    </Canvas>
+</Page>
